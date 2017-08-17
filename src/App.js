@@ -43,7 +43,7 @@ class App extends Component {
     })
   }
 
-  updateFoundBooksAlreadyInBookShelf = (foundBooks) => {
+  adjustFoundBooksBookShelf = (foundBooks) => {
     return foundBooks.map((foundBook) => {
       const foundBookInBookShelf = this.findInBookShelf(this.state.books, foundBook)
       if (foundBookInBookShelf) {
@@ -60,7 +60,7 @@ class App extends Component {
           <Books books={this.state.books} onAdjustBooksBookShelf={this.adjustBooksBookShelf}/>
         )}/>
         <Route path='/search' render={() => (
-          <SearchBooks onUpdateFoundBooksAlreadyInBookShelf={this.updateFoundBooksAlreadyInBookShelf} onAdjustBooksBookShelf={this.adjustBooksBookShelf}/>
+          <SearchBooks onAdjustFoundBooksBookShelf={this.adjustFoundBooksBookShelf} onAdjustBooksBookShelf={this.adjustBooksBookShelf}/>
         )}/>
       </div>
     )

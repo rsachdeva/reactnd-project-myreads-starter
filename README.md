@@ -31,3 +31,8 @@ yarn start
 ```
 
 Uses ES6/ES7 JS Style of code.
+
+## Copyright
+Please notify if you are directly using code from here. Thanks.
+Copyright © 2009-2017, DRInnovations, LLC (www.drinnovations.us)
+

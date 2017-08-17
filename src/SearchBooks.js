@@ -6,7 +6,7 @@ import * as BooksAPI from './BooksAPI'
 
 class SearchBooks extends Component {
   static propTypes = {
-    onUpdateFoundBooksAlreadyInBookShelf: PropTypes.func.isRequired,
+    onAdjustFoundBooksBookShelf: PropTypes.func.isRequired,
     onAdjustBooksBookShelf: PropTypes.func.isRequired
   }
 
@@ -27,7 +27,7 @@ class SearchBooks extends Component {
           this.clearFoundBooks()
         } else {
           // the foundBooks have to reflect state on bookshelf as per books alreday in Book shelf
-          this.setState({ foundBooks: this.props.onUpdateFoundBooksAlreadyInBookShelf(foundBooks) })
+          this.setState({ foundBooks: this.props.onAdjustFoundBooksBookShelf(foundBooks) })
         }
       })
     }
